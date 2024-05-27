@@ -1,0 +1,43 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Requirement') {
+            steps {
+                echo 'Requirement Collection'
+            }
+        }
+        stage('Analysis') {
+            steps {
+                echo 'Analysis Requirement'
+            }
+        }
+        stage('Design') {
+            steps {
+                echo 'Designing car'
+            }
+        }
+        stage('Code') {
+            steps {
+                echo 'Coding'
+            }
+        }
+        stage('Testing') {
+            steps {
+                echo 'Testing system'
+            }
+        }
+    }
+
+    post {
+        always {
+            echo 'Pipeline completed'
+        }
+        success {
+            echo 'Pipeline succeeded'
+        }
+        failure {
+            echo 'Pipeline failed'
+        }
+    }
+}
