@@ -3,34 +3,34 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                dir('C:\Users\HLTJTAY\Desktop\Jenkins training/test.bat') {
+                dir('C:/Users/HLTJTAY/Desktop/Jenkins training/test.bat') {
                     /* execute commands in the scripts directory */
                 }
-            bat 'C:\Users\HLTJTAY\Desktop\Jenkins training/test.bat'
+            bat 'C:/Users/HLTJTAY/Desktop/Jenkins training/test.bat'
             }
         }
         stage('Test') {
             steps {
-                dir('C:\Users\HLTJTAY\Desktop\Jenkins training/test.bat') {
+                dir('C:/Users/HLTJTAY/Desktop/Jenkins training/test.bat') {
                     /* execute commands in the scripts directory */
                 }
-                bat 'C:\Users\HLTJTAY\Desktop\Jenkins training/test.bat'
+                bat 'C:/Users/HLTJTAY/Desktop/Jenkins training/test.bat'
             }
         }
       stage('Package') {
             steps {
-                dir('C:\Users\HLTJTAY\Desktop\Jenkins training/test.bat') {
+                dir('C:/Users/HLTJTAY/Desktop/Jenkins training/test.bat') {
                     /* execute commands in the scripts directory */
                 }
-                bat 'C:\Users\HLTJTAY\Desktop\Jenkins training/test.bat'
+                bat 'C:/Users/HLTJTAY/Desktop/Jenkins training/test.bat'
             }
         }
         stage('Deploy') {
             steps {
-                dir('C:\Users\HLTJTAY\Desktop\Jenkins training/test.bat') {
+                dir('C:/Users/HLTJTAY/Desktop/Jenkins training/test.bat') {
                     /* execute commands in the scripts directory */
                 }
-                bat 'C:\Users\HLTJTAY\Desktop\Jenkins training/test.bat'
+                bat 'C:/Users/HLTJTAY/Desktop/Jenkins training/test.bat'
             }
         }
     }
