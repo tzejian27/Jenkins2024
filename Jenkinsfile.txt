@@ -1,37 +1,43 @@
 pipeline {
     agent any
+
     stages {
-        stage('Build') {
+        stage('Requirement') {
             steps {
-                dir('C:/Users/HLTJTAY/Desktop/Jenkins training/test.bat') {
-                    /* execute commands in the scripts directory */
-                }
-            bat 'C:/Users/HLTJTAY/Desktop/Jenkins training/test.bat'
+                echo 'Requirement Collection'
             }
         }
-        stage('Test') {
+        stage('Analysis') {
             steps {
-                dir('C:/Users/HLTJTAY/Desktop/Jenkins training/test.bat') {
-                    /* execute commands in the scripts directory */
-                }
-                bat 'C:/Users/HLTJTAY/Desktop/Jenkins training/test.bat'
+                echo 'Analysis Requirement'
             }
         }
-      stage('Package') {
+        stage('Design') {
             steps {
-                dir('C:/Users/HLTJTAY/Desktop/Jenkins training/test.bat') {
-                    /* execute commands in the scripts directory */
-                }
-                bat 'C:/Users/HLTJTAY/Desktop/Jenkins training/test.bat'
+                echo 'Designing car'
             }
         }
-        stage('Deploy') {
+        stage('Code') {
             steps {
-                dir('C:/Users/HLTJTAY/Desktop/Jenkins training/test.bat') {
-                    /* execute commands in the scripts directory */
-                }
-                bat 'C:/Users/HLTJTAY/Desktop/Jenkins training/test.bat'
+                echo 'Coding'
             }
+        }
+        stage('Testing') {
+            steps {
+                echo 'Testing system'
+            }
+        }
+    }
+
+    post {
+        always {
+            echo 'Pipeline completed'
+        }
+        success {
+            echo 'Pipeline succeeded'
+        }
+        failure {
+            echo 'Pipeline failed'
         }
     }
 }
