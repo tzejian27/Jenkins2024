@@ -1,43 +1,37 @@
 pipeline {
     agent any
-
     stages {
-        stage('Requirement') {
+        stage('Build') {
             steps {
-                echo 'Requirement Collection'
+                dir('C:/Jenkins/test.bat') {
+                    /* execute commands in the scripts directory */
+                }
+            bat 'C:/Jenkins/test.bat'
             }
         }
-        stage('Analysis') {
+        stage('Test') {
             steps {
-                echo 'Analysis Requirement'
+                dir('C:/Jenkins/test.bat') {
+                    /* execute commands in the scripts directory */
+                }
+                bat 'C:/Jenkins/test.bat'
             }
         }
-        stage('Design') {
+      stage('Package') {
             steps {
-                echo 'Designing car'
+                dir('C:/Jenkins/test.bat') {
+                    /* execute commands in the scripts directory */
+                }
+                bat 'C:/Jenkins/test.bat'
             }
         }
-        stage('Code') {
+        stage('Deploy') {
             steps {
-                echo 'Coding'
+                dir('C:/Jenkins/test.bat') {
+                    /* execute commands in the scripts directory */
+                }
+                bat 'C:/Jenkins/test.bat'
             }
-        }
-        stage('Testing') {
-            steps {
-                echo 'Testing system'
-            }
-        }
-    }
-
-    post {
-        always {
-            echo 'Pipeline completed'
-        }
-        success {
-            echo 'Pipeline succeeded'
-        }
-        failure {
-            echo 'Pipeline failed'
         }
     }
 }
